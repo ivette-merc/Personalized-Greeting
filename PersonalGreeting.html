@@ -6,15 +6,36 @@
     <title>Personal Greeting</title>
   </head>
   <script>
-    let firstName = "Ivette";
-    let lastName = "Mercado";
-    let age = 32;
-    let city = "Queens";
+    let firstName = prompt("Enter your first name", "Ivette");
+    let lastName = prompt("Enter your last name", "Mercado");
+    let age = prompt("Enter your age", 32);
+    let city = prompt("Where are you from", "Queens");
 
-    console.log(
-      `Hello! My I'm ${firstName} ${lastName}! I’m ${age}yrs old, and I’m from ${city}. Nice to meet you!`
-    );
+    let myInitials = firstName[0] + lastName[0];
+    console.log(myInitials);
+
+    let nameLength = firstName.length;
+    console.log(nameLength);
+
+    let fullNameCaps = firstName + " " + lastName;
+    console.log(fullNameCaps.toUpperCase());
+
+    const personalGreeting = (firstName, lastName, age, city) => {
+      return `Hello! My I'm ${firstName} ${lastName}! I’m ${age}yrs old, and I’m from ${city}. Nice to meet you!`;
+    };
+
+    const initials = (firstName, lastName) => {
+      return `My initials are ${firstName[0]} ${lastName[0]}`;
+    };
+
+    const personalGreetingCaps = (firstName, lastName, age, city) => {
+      return `Hello! My I'm ${firstName} ${lastName}! I’m ${age}yrs old, and I’m from ${city}. Nice to meet you!`;
+    };
+
+    console.log(personalGreeting(firstName, lastName, age, city));
+    console.log(initials(firstName, lastName));
   </script>
+
   <body>
     <h1>Open Console for a message!</h1>
   </body>
